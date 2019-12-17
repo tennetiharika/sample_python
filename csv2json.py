@@ -36,7 +36,7 @@ for x in inputFile:
     row += 1
 
 with open(output_file_path, 'wb') as op:
-    json.dump(output_dict, op)
+    json.dump(output_dict, op,indent=4)
 
 inputFile.close()
 
