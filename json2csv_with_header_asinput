@@ -27,8 +27,7 @@ json_input_data = json.load(open(input_file))
 rows = json_input_data['result']['data']
 flattened_jsons = []
 for row in rows:
-    # Get flattened dictionary
-    flattened_jsons.append(flatten(row))
+    flattened_jsons.append(flatten(row).copy())
 
 # Get header from flattened dictionary. If header is given as argument then take it
 headerList = flattened_jsons[0].keys()
